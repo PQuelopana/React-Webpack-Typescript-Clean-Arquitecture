@@ -3,12 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (env) {
   const isProd = !!env.production;
-  // const ENVIRONMENT = isProd ? 'production' : 'development';
 
-  const entry = [path.resolve(__dirname) + '/src/index.js'];
+  const entry = [path.resolve(__dirname) + '/src/index.tsx'];
 
   return {
-    mode: isProd?'production':'development',
+    mode: isProd ? 'production' : 'development',
     entry: entry,
     devtool: "source-map",
     resolve: {
